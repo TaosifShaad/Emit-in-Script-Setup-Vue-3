@@ -21,7 +21,7 @@
     const emit = defineEmits(['submit'])
     function add() {
         emit('submit', state.addInput)
-        sAlert('Done', 'Added Item!', 'success')
+        sAlert('Success', 'Added Item!', 'success')
         state.addInput = ''
     }
 </script>

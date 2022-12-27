@@ -41,8 +41,11 @@
         border: 1px solid;
         max-width: 96%;
         text-align: center;
+        border-radius: 17px;
+        box-shadow: 0px 0px 9px 5px navajowhite;
     }
     li {
         border-bottom: 1px solid;
+        border-radius: 20px;
     }
 </style>
