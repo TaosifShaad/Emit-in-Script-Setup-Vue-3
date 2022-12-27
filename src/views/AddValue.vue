@@ -1,8 +1,10 @@
 <template>
-    <div>
-        <li v-for="item in state.items"> {{ item }} </li>
-    </div>
-    <create @submit="add"></create>
+    <div id="all">
+        <div class="items">
+            <li v-for="item in state.items"> {{ item }} </li>
+        </div>
+        <create :title="state.title" @submit="add"></create>
+    </div> 
 </template>
 
 
@@ -10,6 +12,7 @@
     import create from '@/components/create.vue';
     import { reactive } from 'vue';
     const state = reactive({
+        title: 'Add Items Here',
         items: [
             'item 1',
             'item 2',
@@ -23,6 +26,23 @@
 </script>
 
 
-<style lang="scss" scoped>
-
+<style scoped>
+    #all {
+        border-radius: 64px;
+        background: #ffffff;
+        box-shadow: 0px 0px 11px #878787, -19px 19px 38px #ffffff;
+        width: 45%;
+        height: 99%;
+        padding: 35px;
+        margin-left: 200px;
+    }
+    .items {
+        list-style: none;
+        border: 1px solid;
+        max-width: 96%;
+        text-align: center;
+    }
+    li {
+        border-bottom: 1px solid;
+    }
 </style>
