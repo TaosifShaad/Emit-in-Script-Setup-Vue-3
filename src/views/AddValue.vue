@@ -1,5 +1,6 @@
 <template>
     <div id="all">
+        <img class="feather" src="@/assets/76-768982_file-beige-feather-svg-feather-cartoon-black-and-white-removebg-preview.png" alt="">
         <div class="items">
             <li v-for="item in state.items"> {{ item }} </li>
         </div>
@@ -35,6 +36,7 @@
         height: 99%;
         padding: 35px;
         margin-left: 200px;
+        position: relative;
     }
     .items {
         list-style: none;
@@ -42,10 +44,19 @@
         max-width: 96%;
         text-align: center;
         border-radius: 17px;
-        box-shadow: 0px 0px 9px 5px navajowhite;
+        box-shadow: 0px 0px 6px 5px navajowhite;
     }
     li {
         border-bottom: 1px solid;
         border-radius: 20px;
+    }
+    .feather {
+        width: 200px;
+        position: absolute;
+        transform: rotate(-45deg);
+        right: -78px;
+        top: -40px;
+        z-index: 1;
+        right: -81px;
     }
 </style>
