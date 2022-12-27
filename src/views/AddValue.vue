@@ -12,7 +12,7 @@
     import create from '@/components/create.vue';
     import { reactive } from 'vue';
     const state = reactive({
-        title: 'Add Items Here',
+        title: 'Add Items:',
         items: [
             'item 1',
             'item 2',
