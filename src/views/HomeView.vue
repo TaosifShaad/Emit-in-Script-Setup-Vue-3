@@ -1,6 +1,6 @@
 <template>
   <main>
-    <TheWelcome />
+    <TheWelcome/>
   </main>
 </template>
 
@@ -10,6 +10,7 @@
   import { useRoute } from 'vue-router';
   import router from '../router';
   import { provide } from "vue";
+  import { user } from "@/stores/userStore"
 
   let name = ref('john doe')
   provide('name', name.value)

@@ -11,7 +11,7 @@
 
 <script setup>
     import create from '@/components/create.vue';
-    import { reactive } from 'vue';
+    import { reactive, onMounted } from 'vue';
     import { inject } from 'vue';
     const state = reactive({
         title: 'Add Items:',
@@ -25,6 +25,9 @@
         console.log(e)
         state.items.push(e);
     }
+    onMounted(() => {
+        console.log('onmounted')
+    })
     let test = inject('test');
     console.log('testing-----' + test);
 </script>
