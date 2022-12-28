@@ -1,9 +1,3 @@
-<script setup>
-import { RouterLink, RouterView } from "vue-router";
-import HelloWorld from "./components/HelloWorld.vue";
-
-</script>
-
 <template>
   <header>
     <img
@@ -27,6 +21,16 @@ import HelloWorld from "./components/HelloWorld.vue";
 
   <RouterView />
 </template>
+
+<script setup>
+import { ref } from "vue";
+import { RouterLink, RouterView } from "vue-router";
+import HelloWorld from "./components/HelloWorld.vue";
+import { provide } from "vue";
+
+let test = ref(false);
+provide('test', test.value);
+</script>
 
 <style scoped>
 header {

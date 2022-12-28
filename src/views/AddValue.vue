@@ -12,6 +12,7 @@
 <script setup>
     import create from '@/components/create.vue';
     import { reactive } from 'vue';
+    import { inject } from 'vue';
     const state = reactive({
         title: 'Add Items:',
         items: [
@@ -24,6 +25,8 @@
         console.log(e)
         state.items.push(e);
     }
+    let test = inject('test');
+    console.log('testing-----' + test);
 </script>
 
 
